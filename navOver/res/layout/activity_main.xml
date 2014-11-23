@@ -19,6 +19,7 @@
          is just an example. As we have set fitSystemWindows=true
          this will be displayed under the status bar. -->
     <LinearLayout
+        android:id="@+id/left_drawer"
         android:layout_width="304dp"
         android:layout_height="match_parent"
         android:layout_gravity="left|start"
@@ -26,7 +27,7 @@
         >
 
         <!-- Your drawer content -->
-        <ListView android:id="@+id/left_drawer"
+        <ListView android:id="@+id/left_drawer_list"
         android:layout_width="304dp"
         android:layout_height="match_parent"
         android:layout_gravity="left|start"
