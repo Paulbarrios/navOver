@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -7,14 +6,16 @@
 
         <!-- We use a Toolbar so that our drawer can be displayed
              in front of the action bar -->
-       <Toolbar  
-            android:id="@+id/toolbar2"
+        <Toolbar  
+            android:id="@+id/toolbar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:background="@color/primary_material_dark" />
+        
+
 
         <!-- The rest of your content view -->
-
+        
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -25,8 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="Lista de Fotos" />
+                android:text="Pagina de perfil" />
 
         </RelativeLayout>
-
 </LinearLayout>
