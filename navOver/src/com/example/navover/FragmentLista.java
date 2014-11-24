@@ -16,8 +16,6 @@ public class FragmentLista extends Fragment{
             Bundle savedInstanceState) {
     		View v = inflater.inflate(R.layout.fragment_list, container, false);
     		
-    		Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar2);
-            getActivity().setActionBar(toolbar);
     	    
             return v;
     }

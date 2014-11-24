@@ -36,7 +36,8 @@ public class MainActivity extends Activity {
 		 
 		 drawerList.setOnItemClickListener(new DrawerItemClickListener());
 		 
-		
+		 Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+	     setActionBar(toolbar);
 		 
 		 
 

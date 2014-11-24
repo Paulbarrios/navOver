@@ -7,11 +7,7 @@
 
         <!-- We use a Toolbar so that our drawer can be displayed
              in front of the action bar -->
-       <Toolbar  
-            android:id="@+id/toolbar2"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:background="@color/primary_material_dark" />
+       
 
         <!-- The rest of your content view -->
 
