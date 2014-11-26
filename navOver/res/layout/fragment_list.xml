@@ -15,11 +15,10 @@
             android:id="@+id/lista_fotos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/NEPHRITIS"
+            android:background="@color/Blanco"
             android:choiceMode="singleChoice"
             android:divider="@android:color/transparent"
-            android:dividerHeight="2dp"
-            android:fitsSystemWindows="true" >
+            android:dividerHeight="2dp" >
         </ListView>
 
 </LinearLayout>
