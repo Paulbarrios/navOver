@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/GrisOscuro"
    >
 
     <!-- Your normal content view -->
      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <!-- We use a Toolbar so that our drawer can be displayed
              in front of the action bar -->
@@ -19,7 +21,7 @@
             android:id="@+id/toolbar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:background="@android:color/background_dark" />
+            android:background="@color/Gris" />
 
         <!-- The rest of your content view -->
         <FrameLayout
@@ -34,28 +36,58 @@
     <!-- Your drawer view. This can be any view, LinearLayout
          is just an example. As we have set fitSystemWindows=true
          this will be displayed under the status bar. -->
+
+   
     <LinearLayout
         android:id="@+id/left_drawer"
         android:layout_width="304dp"
         android:layout_height="match_parent"
         android:layout_gravity="left|start"
-        android:fitsSystemWindows="true"
-        android:background="@android:color/holo_blue_light"
         android:layout_marginTop="@dimen/topMargin"
-        >
+        android:background="@color/Blanco"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical" >
+        
+        
+            
+             <RelativeLayout
+                android:id="@+id/chosen_account_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:background="@drawable/fondo" >
+
+                <ImageView
+                    android:id="@+id/profile_cover_image"
+                    android:layout_width="46dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="23dp"
+
+                    android:src="@drawable/cat"
+                    android:tint="@color/abc_background_cache_hint_selector_material_dark" />
+				
+            </RelativeLayout>
 
         <!-- Your drawer content -->
-        <ListView 
-        android:id="@+id/left_drawer_list"
-        android:layout_width="304dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="left|start"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="@color/NEPHRITIS"
-        android:fitsSystemWindows="true"/>
+
+        <ListView
+            android:id="@+id/left_drawer_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/NEPHRITIS"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:fitsSystemWindows="true" >
+        </ListView>
+            
+            
+       
+           
 
     </LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

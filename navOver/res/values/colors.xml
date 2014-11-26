@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
      <item name="NEPHRITIS" type="color">#27ae60</item> 
-     <item name="NEPHRITIS2" type="color">#44400000</item> 
+     <item name="NEPHRITIS2" type="color">#44400000</item>
+     <item name="Gris" type="color">#757575</item> 
+     <item name="NegroTranslucido" type="color">#000000</item>
+     <item name="GrisOscuro" type="color">#525252</item> 
+     <item name="Blanco" type="color">#ecf0f1</item> 
 </resources>

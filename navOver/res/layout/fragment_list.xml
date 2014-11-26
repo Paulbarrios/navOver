@@ -3,7 +3,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/NEPHRITIS">
+        android:background="@color/Blanco">
 
         <!-- We use a Toolbar so that our drawer can be displayed
              in front of the action bar -->
@@ -11,18 +11,15 @@
 
         <!-- The rest of your content view -->
 
-        <RelativeLayout
+        <ListView
+            android:id="@+id/lista_fotos"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="Lista de Fotos" />
-
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:background="@color/NEPHRITIS"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            android:fitsSystemWindows="true" >
+        </ListView>
 
 </LinearLayout>
