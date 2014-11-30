@@ -5,5 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="title_activity_foto">FotoActivity</string>
 
 </resources>

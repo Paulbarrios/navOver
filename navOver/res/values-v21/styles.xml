@@ -7,12 +7,18 @@
     -->
    
     <style name="Theme.MyApp" parent="android:Theme.Material.Light.NoActionBar">
-    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:colorPrimary">@color/Gris</item>
+
     <item name="android:statusBarColor">@color/NegroTranslucido</item>
-    <item name="android:windowTranslucentStatus">true</item>
     <item name="windowActionModeOverlay">true</item>
+    <item name="android:windowTranslucentStatus">true</item>
     <item name="windowActionBar">false</item>
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
 </style>
 <dimen name="topMargin">-25dp</dimen>
+<dimen name="topMargin2">25dp</dimen>
+<style name="NoStatusBar">
+    <item name="android:windowTranslucentStatus">false</item>
+</style>
 
 </resources>

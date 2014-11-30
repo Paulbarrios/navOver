@@ -2,21 +2,14 @@
 <resources>
 <string-array name="subtitulos">
         <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
-        <item>subtitulo 1</item>
+        <item>subtitulo 2</item>
+        <item>subtitulo 3</item>
+        <item>subtitulo 4</item>
+        <item>subtitulo 5</item>
+        <item>subtitulo 6</item>
+        <item>subtitulo 7</item>
+        <item>subtitulo 8</item>
+        <item>subtitulo 9</item>
        
     </string-array>
 </resources>

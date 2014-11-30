@@ -37,7 +37,7 @@
          is just an example. As we have set fitSystemWindows=true
          this will be displayed under the status bar. -->
 
-   
+   <!--   -->
     <LinearLayout
         android:id="@+id/left_drawer"
         android:layout_width="304dp"

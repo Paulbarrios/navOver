@@ -3,6 +3,8 @@ package com.example.navover;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +19,7 @@ public class FragmentLista extends Fragment{
 	
 	private String[] titulos; 
 	private String[] subtitulos;
-	private int[] imagenes;
+	private TypedArray  imagenes;
 	private ElementosLista[] datos;
 	private ListView listaFotos;
 	
@@ -27,14 +29,15 @@ public class FragmentLista extends Fragment{
 		 if(isAdded()){
 			 	titulos = getResources().getStringArray(R.array.titulos);
 			 	subtitulos = getResources().getStringArray(R.array.subtitulos);
-			 	imagenes = getResources().getIntArray(R.array.subtitulos);
+			 	imagenes = getResources().obtainTypedArray(R.array.imagenes);
 		 }
+		 
 		 
 		datos = new ElementosLista[titulos.length];
 		for (int i = 0; i < titulos.length; i++) {
-			datos[i] = new ElementosLista(titulos[i], subtitulos[i], imagenes[i]);
+			datos[i] = new ElementosLista(titulos[i], subtitulos[i], imagenes.getResourceId(i, 1));
 		}
-		
+		imagenes.recycle();
 		View v = inflater.inflate(R.layout.fragment_list, container, false);
 		AdaptadorListaFotos adaptador = new AdaptadorListaFotos(getActivity());
 		
@@ -53,9 +56,19 @@ public class FragmentLista extends Fragment{
 	    @Override
 	    public void onItemClick(AdapterView<?> a, View view, int position, long id) {
 	    	String opcionSeleccionada =((ElementosLista)a.getAdapter().getItem(position)).getTitulo();
+	    	
 	        getActivity().getActionBar().setTitle(opcionSeleccionada);
+	        Intent inten = new Intent(getActivity(), FotoActivity.class);
+	        inten.putExtra("idImage", ((ElementosLista)a.getAdapter().getItem(position)).getFoto());
+	        getActivity().startActivity(inten);
 	    }
 
+	}
+	
+	static class ViewHolder {
+	    TextView titulo;
+	    TextView subtitulo;
+	    ImageView image;
 	}
 	
 	class AdaptadorListaFotos extends ArrayAdapter {
@@ -68,19 +81,32 @@ public class FragmentLista extends Fragment{
 	        }
 	 
 	        public View getView(int position, View convertView, ViewGroup parent) {
-	        LayoutInflater inflater = context.getLayoutInflater();
-	        View item = inflater.inflate(R.layout.elemento_lista, null);
-	 
-	        TextView lblTitulo = (TextView)item.findViewById(R.id.LblTitulo);
-	        lblTitulo.setText(datos[position].getTitulo());
-	 
-	        TextView lblSubtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
-	        lblSubtitulo.setText(datos[position].getSubtitulo());
+	        	
+	        View item = convertView;
+	        ViewHolder holder;
 	        
-	        ImageView image = (ImageView)item.findViewById(R.id.image);
-	        image.setImageResource(datos[position].getFoto());
-	 
+	        if(item == null)
+	        {
+	            LayoutInflater inflater = context.getLayoutInflater();
+	            item = inflater.inflate(R.layout.elemento_lista, null);
+	     
+	            holder = new ViewHolder();
+	            holder.titulo = (TextView)item.findViewById(R.id.Titulo);
+	            holder.subtitulo = (TextView)item.findViewById(R.id.SubTitulo);
+	            holder.image = (ImageView)item.findViewById(R.id.image);
+	     
+	            item.setTag(holder);
+	        }
+	        else
+	        {
+	            holder = (ViewHolder)item.getTag();
+	        }
+	     
+	        holder.titulo.setText(datos[position].getTitulo());
+	        holder.subtitulo.setText(datos[position].getSubtitulo());
+	        holder.image.setImageResource(datos[position].getFoto());
 	        return(item);
+	        
 	    }
 	}
 }

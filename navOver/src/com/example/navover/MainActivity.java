@@ -2,13 +2,9 @@ package com.example.navover;
 
 
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
@@ -46,7 +42,6 @@ public class MainActivity extends ActionBarActivity {
 	     setActionBar(toolbar);
 		 
 	     
-	     //getActionBar().setDisplayHomeAsUpEnabled(true);
 	     getActionBar().setDisplayHomeAsUpEnabled(true);
 	     toolbar.setNavigationIcon(R.drawable.ic_drawer);
 	     toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -55,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
                  drawerLayout.openDrawer(Gravity.START);
              }
          });
-	     selectItem(0);
+	     selectItem(1);
 	     
 	     
 	     
@@ -93,7 +88,7 @@ public class MainActivity extends ActionBarActivity {
 	}
 	
 	public void selectItem(int position) {
-	    // Create a new fragment and specify the planet to show based on position
+	    
 		Fragment fragment = null;
 		 
         switch (position) {

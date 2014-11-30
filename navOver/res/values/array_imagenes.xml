@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <array name="imagenes">
+        <item>@drawable/art</item>
+        <item>@drawable/artr</item>
         <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>
-        <item>@drawable/cat</item>    
+        <item>@drawable/cat2</item>
+        <item>@drawable/city</item>
+        <item>@drawable/dog</item>
+        <item>@drawable/ert</item>
+        <item>@drawable/pig</item>
+        <item>@drawable/spo</item>
     </array>
 </resources>
