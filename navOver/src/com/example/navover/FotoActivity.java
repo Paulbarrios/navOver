@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 import android.support.v4.app.NavUtils;
 
@@ -22,6 +23,9 @@ public class FotoActivity extends Activity {
 	     Bundle extras = getIntent().getExtras();
 	     if (extras != null) {
 	    	 imagenId = extras.getInt("idImage", 0);
+	    	 TextView texMax = (TextView) findViewById(R.id.tituloMax);
+	    	 texMax.setText(extras.getString("Titulo"));
+	    	 getActionBar().setTitle(extras.getString("Titulo"));
 	     }
 
 	     

@@ -17,10 +17,11 @@ public final class R {
         public static final int abc_slide_out_top=0x7f040005;
     }
     public static final class array {
-        public static final int imagenes=0x7f0c0001;
+        public static final int imagenes=0x7f0c0002;
         public static final int menuLista=0x7f0c0000;
-        public static final int subtitulos=0x7f0c0002;
-        public static final int titulos=0x7f0c0003;
+        public static final int paises=0x7f0c0001;
+        public static final int subtitulos=0x7f0c0003;
+        public static final int titulos=0x7f0c0004;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -1583,6 +1584,7 @@ containing a value of this type.
         public static final int disabled_alpha_material_dark=0x7f070001;
         public static final int disabled_alpha_material_light=0x7f070000;
         public static final int topMargin=0x7f07002b;
+        public static final int topMargin2=0x7f07002c;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -1636,15 +1638,25 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020030;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static final int abc_textfield_search_material=0x7f020032;
-        public static final int cat=0x7f020033;
-        public static final int fondo=0x7f020034;
-        public static final int ic_drawer=0x7f020035;
-        public static final int ic_launcher=0x7f020036;
+        public static final int art=0x7f020033;
+        public static final int artr=0x7f020034;
+        public static final int cat=0x7f020035;
+        public static final int cat2=0x7f020036;
+        public static final int check=0x7f020037;
+        public static final int city=0x7f020038;
+        public static final int dog=0x7f020039;
+        public static final int ert=0x7f02003a;
+        public static final int fondo=0x7f02003b;
+        public static final int ic_drawer=0x7f02003c;
+        public static final int ic_launcher=0x7f02003d;
+        public static final int pig=0x7f02003e;
+        public static final int spo=0x7f02003f;
     }
     public static final class id {
-        public static final int LblSubTitulo=0x7f090048;
-        public static final int LblTitulo=0x7f090047;
-        public static final int RelativeLayout1=0x7f090046;
+        public static final int LinearLayout1=0x7f09003f;
+        public static final int RelativeLayout1=0x7f090058;
+        public static final int SubTitulo=0x7f09005a;
+        public static final int Titulo=0x7f090059;
         public static final int action_bar=0x7f090031;
         public static final int action_bar_activity_content=0x7f090003;
         public static final int action_bar_container=0x7f090030;
@@ -1660,37 +1672,58 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f090020;
         public static final int activity_chooser_view_content=0x7f090021;
         public static final int always=0x7f090014;
+        public static final int apellidos=0x7f090044;
+        public static final int apellidosContenido=0x7f09005d;
         public static final int beginning=0x7f09001b;
+        public static final int button1=0x7f09004f;
         public static final int checkbox=0x7f090029;
-        public static final int chosen_account_content_view=0x7f090043;
-        public static final int chosen_account_view=0x7f09004b;
+        public static final int chosen_account_content_view=0x7f090055;
         public static final int collapseActionView=0x7f090015;
-        public static final int container=0x7f090041;
+        public static final int container=0x7f090054;
+        public static final int correo=0x7f090046;
         public static final int decor_content_parent=0x7f09002f;
         public static final int default_activity_button=0x7f090024;
         public static final int dialog=0x7f090019;
         public static final int disableHome=0x7f09000d;
-        public static final int drawer_layout=0x7f09003f;
+        public static final int drawer_layout=0x7f090053;
         public static final int dropdown=0x7f09001a;
+        public static final int editApellidos=0x7f090045;
+        public static final int editCorreo=0x7f090047;
+        public static final int editFotografo=0x7f090048;
+        public static final int editNombre=0x7f090043;
+        public static final int editPais=0x7f09004a;
         public static final int edit_query=0x7f090033;
+        public static final int email=0x7f09005e;
+        public static final int emailContenido=0x7f09005f;
         public static final int end=0x7f09001c;
         public static final int expand_activities_button=0x7f090022;
         public static final int expanded_menu=0x7f090028;
+        public static final int fotografo=0x7f090061;
+        public static final int fotografoContenido=0x7f090060;
+        public static final int grpSexo=0x7f09004c;
+        public static final int hombre=0x7f09004d;
         public static final int home=0x7f090000;
         public static final int homeAsUp=0x7f09000e;
         public static final int icon=0x7f090026;
         public static final int ifRoom=0x7f090016;
         public static final int image=0x7f090023;
-        public static final int left_drawer=0x7f090042;
-        public static final int left_drawer_list=0x7f090045;
+        public static final int imagenMax=0x7f090050;
+        public static final int imagenToast=0x7f090065;
+        public static final int left_drawer=0x7f090041;
+        public static final int left_drawer_list=0x7f090057;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f090025;
-        public static final int lista_fotos=0x7f090049;
+        public static final int lista_fotos=0x7f09005b;
         public static final int middle=0x7f09001d;
+        public static final int mujer=0x7f09004e;
         public static final int never=0x7f090017;
+        public static final int nombre=0x7f090042;
+        public static final int nombreContenido=0x7f09005c;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
-        public static final int profile_cover_image=0x7f090044;
+        public static final int pais=0x7f090049;
+        public static final int paisContenido=0x7f090062;
+        public static final int profile_cover_image=0x7f090056;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
         public static final int radio=0x7f09002b;
@@ -1704,15 +1737,20 @@ containing a value of this type.
         public static final int search_plate=0x7f090039;
         public static final int search_src_text=0x7f09003a;
         public static final int search_voice_btn=0x7f09003e;
+        public static final int sexo=0x7f09004b;
+        public static final int sexoContenedor=0x7f090063;
         public static final int shortcut=0x7f09002a;
         public static final int showCustom=0x7f090010;
         public static final int showHome=0x7f090011;
         public static final int showTitle=0x7f090012;
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003c;
+        public static final int subtituloMax=0x7f090052;
         public static final int tabMode=0x7f09000c;
-        public static final int textView1=0x7f09004a;
+        public static final int text=0x7f090066;
         public static final int title=0x7f090027;
+        public static final int tituloMax=0x7f090051;
+        public static final int toastPersonalizada=0x7f090064;
         public static final int toolbar=0x7f090040;
         public static final int up=0x7f090001;
         public static final int useLogo=0x7f090013;
@@ -1768,12 +1806,14 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030014;
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
-        public static final int activity_main=0x7f030017;
-        public static final int elemento_lista=0x7f030018;
-        public static final int fragment_list=0x7f030019;
-        public static final int fragment_perfil=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
-        public static final int test=0x7f03001c;
+        public static final int activity_editar_perfil=0x7f030017;
+        public static final int activity_foto=0x7f030018;
+        public static final int activity_main=0x7f030019;
+        public static final int elemento_lista=0x7f03001a;
+        public static final int fragment_list=0x7f03001b;
+        public static final int fragment_perfil=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int toast=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
@@ -1835,10 +1875,22 @@ containing a value of this type.
         /**  Content description for the Toolbar icon used to collapse an expanded action mode. [CHAR LIMIT=NONE] 
          */
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
+        public static final int apellidos=0x7f0a0017;
         public static final int app_name=0x7f0a0010;
-        public static final int drawer_close=0x7f0a0013;
-        public static final int drawer_open=0x7f0a0012;
-        public static final int hello_world=0x7f0a0011;
+        public static final int correo=0x7f0a0018;
+        public static final int drawer_close=0x7f0a0012;
+        public static final int drawer_open=0x7f0a0011;
+        public static final int editar=0x7f0a001f;
+        public static final int fotrografo=0x7f0a0019;
+        public static final int guardar=0x7f0a001e;
+        public static final int hombre=0x7f0a001c;
+        public static final int mujer=0x7f0a001d;
+        public static final int nombre=0x7f0a0016;
+        public static final int pais=0x7f0a001b;
+        public static final int sexo=0x7f0a001a;
+        public static final int title_activity_editar_perfil=0x7f0a0014;
+        public static final int title_activity_foto=0x7f0a0013;
+        public static final int tostada=0x7f0a0015;
     }
     public static final class style {
         /** 
@@ -2001,6 +2053,7 @@ containing a value of this type.
     
          */
         public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b0090;
+        public static final int NoStatusBar=0x7f0b00ee;
         public static final int Platform_AppCompat=0x7f0b00c9;
         public static final int Platform_AppCompat_Dialog=0x7f0b00cb;
         public static final int Platform_AppCompat_Light=0x7f0b00ca;

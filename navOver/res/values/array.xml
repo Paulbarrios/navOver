@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string-array name="menuLista">
+	<string-array name="menuLista">
         <item>Perfil</item>
         <item>Fotos</item>
+        <item>Camara</item>
+       
+    </string-array>
+    <string-array name="paises">
+        <item>España</item>
+        <item>Estados Unidos</item>
+        <item>Francia</item>
        
     </string-array>
 </resources>

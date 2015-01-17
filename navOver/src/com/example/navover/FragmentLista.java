@@ -57,9 +57,10 @@ public class FragmentLista extends Fragment{
 	    public void onItemClick(AdapterView<?> a, View view, int position, long id) {
 	    	String opcionSeleccionada =((ElementosLista)a.getAdapter().getItem(position)).getTitulo();
 	    	
-	        getActivity().getActionBar().setTitle(opcionSeleccionada);
+
 	        Intent inten = new Intent(getActivity(), FotoActivity.class);
 	        inten.putExtra("idImage", ((ElementosLista)a.getAdapter().getItem(position)).getFoto());
+	        inten.putExtra("Titulo", opcionSeleccionada);
 	        getActivity().startActivity(inten);
 	    }
 

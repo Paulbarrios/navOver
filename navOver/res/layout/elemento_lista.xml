@@ -23,8 +23,7 @@
         android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:tint="@color/abc_background_cache_hint_selector_material_dark" />
+        android:layout_marginLeft="20dp" />
 
     <TextView
         android:id="@+id/SubTitulo"

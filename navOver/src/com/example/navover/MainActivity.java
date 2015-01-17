@@ -2,9 +2,15 @@ package com.example.navover;
 
 
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.preference.DialogPreference;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
@@ -50,7 +56,19 @@ public class MainActivity extends ActionBarActivity {
                  drawerLayout.openDrawer(Gravity.START);
              }
          });
-	     selectItem(1);
+	     
+	     Bundle extras = getIntent().getExtras();
+	     if(extras != null){
+	    	 if (extras.getBoolean("voy") == true) {
+		    	 selectItem(0, extras);
+		     }else{
+		    	 selectItem(1, null);
+		     }
+	     }else{
+	    	 selectItem(1, null);
+	     }
+	     
+	     
 	     
 	     
 	     
@@ -82,37 +100,82 @@ public class MainActivity extends ActionBarActivity {
 	private class DrawerItemClickListener implements ListView.OnItemClickListener {
 	    @Override
 	    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-	        selectItem(position);
+	        selectItem(position, null);
 	    }
 
 	}
 	
-	public void selectItem(int position) {
+	public void selectItem(int position, Bundle extras) {
 	    
 		Fragment fragment = null;
 		 
         switch (position) {
             case 0:
-                fragment = new FragmentPerfil();
+            	fragment = new FragmentPerfil();
+				if(extras != null){
+				   fragment.setArguments(extras);         		
+				}
                 break;
             case 1:
                 fragment = new FragmentLista();
                 break;
+            case 2:
+            	FragmentManager fragmentManager =
+        		getFragmentManager();
+            	DialogoAccesoCamara dialogo = new DialogoAccesoCamara();
+            	dialogo.show(fragmentManager, "tag");
+
+                
+                break;
         }
 
-        FragmentManager fragmentManager =
-        		getFragmentManager();
+        if(fragment != null){
+        	FragmentManager fragmentManager =
+            		getFragmentManager();
 
-        fragmentManager.beginTransaction()
-            .replace(R.id.container, fragment)
-            .commit();
+            fragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit();
 
-        drawerList.setItemChecked(position, true);
+            drawerList.setItemChecked(position, true);
 
-        tituloSeccion = listaMenu[position];
-        getActionBar().setTitle(tituloSeccion);
+            tituloSeccion = listaMenu[position];
+            getActionBar().setTitle(tituloSeccion);
 
-        drawerLayout.closeDrawer(drawerLeft);
+            drawerLayout.closeDrawer(drawerLeft);
+        }
+        
+	}
+	
+	public void editar(View v) {
+		 	Intent inten = new Intent(this, EditarPerfil.class);
+	        startActivity(inten);
+	}
+	
+	public class DialogoAccesoCamara extends DialogFragment {
+	    @Override
+	    public Dialog onCreateDialog(Bundle savedInstanceState) {
+	 
+	        AlertDialog.Builder builder =
+	                new AlertDialog.Builder(getActivity());
+	 
+	        builder.setMessage("Esta opción aun no esta diponible, pero igualemente puede accerder a la camara.")
+	        .setTitle("Tomar foto")
+	        .setPositiveButton("Aceptar", new DialogInterface.OnClickListener()  {
+	               public void onClick(DialogInterface dialog, int id) {
+	            	   	Intent inten = new Intent("android.media.action.IMAGE_CAPTURE");
+	                    startActivityForResult(inten, 0);
+	                        dialog.cancel();
+	                   }
+	               })
+	        .setNegativeButton("Volver", new DialogInterface.OnClickListener() {
+	               public void onClick(DialogInterface dialog, int id) {
+	                        dialog.cancel();
+	                   }
+	               });
+	 
+	        return builder.create();
+	    }
 	}
 }
 
